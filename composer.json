@@ -1,0 +1,11 @@
+{
+    "name": "shortlist-digital/croissant-admin-theme",
+    "description": "Admin theme for Croissant flavoured WordPress installations",
+    "authors": [
+        {
+            "name": "Jon Sherrard",
+            "email": "jon@andthats.it"
+        }
+    ],
+    "require": {}
+}
