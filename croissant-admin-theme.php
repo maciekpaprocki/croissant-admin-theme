@@ -78,7 +78,7 @@ if( class_exists('croissant') ) {
     if( $option_theme ){
       wp_enqueue_style('croissant-admin-theme-' . $option_theme, plugins_url('css/croissant-' . $option_theme . '.css', __FILE__));
     } else {
-      wp_enqueue_style('croissant-admin-theme-default', plugins_url('css/croissant-default.css', __FILE__));
+      wp_enqueue_style('croissant-admin-theme-clean', plugins_url('css/croissant-clean.css', __FILE__));
     }
   }
   add_action('admin_enqueue_scripts', 'update_style');
