@@ -646,13 +646,6 @@ if (!empty(get_option('croissant_theme'))) {
         color: {$color_4} !important;
       }
 
-      #adminmenu li.wp-not-current-submenu a.menu-top:focus + .wp-submenu,
-      .js #adminmenu li.wp-not-current-submenu.opensub .wp-submenu,
-      .js #adminmenu .sub-open,
-      .no-js li.wp-has-submenu:hover .wp-submenu {
-        top: -1000em;
-      }
-
       #adminmenuback,
       #adminmenuwrap,
       #adminmenu {
@@ -717,6 +710,7 @@ if (!empty(get_option('croissant_theme'))) {
       #adminmenuwrap ul#adminmenu li.wp-not-current-submenu ul.wp-submenu {
         left: 200px;
         margin-top: 1px;
+        background: {$color_2};
       }
       #adminmenuwrap ul#adminmenu li:hover a, #adminmenuwrap ul#adminmenu li:focus a {
         color: white;
