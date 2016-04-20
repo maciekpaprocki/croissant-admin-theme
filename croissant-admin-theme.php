@@ -126,13 +126,13 @@ if( class_exists('croissant') ) {
   $option_c3 = get_option('croissant_color_3');
   $option_c4 = get_option('croissant_color_4');
 
-  function croissant_style_custom() {
-    wp_enqueue_style('custom-style', plugins_url('css/croissant-custom.css', __FILE__));
+  // function croissant_style_custom() {
+  //   wp_enqueue_style('custom-style', plugins_url('css/croissant-custom.css', __FILE__));
 
-    include_once('admin/style-custom.php');
-  }
-  add_action('admin_enqueue_scripts', 'croissant_style_custom');
-  add_action('login_enqueue_scripts', 'croissant_style_custom');
+  //   include_once('admin/style-custom.php');
+  // }
+  // add_action('admin_enqueue_scripts', 'croissant_style_custom');
+  // add_action('login_enqueue_scripts', 'croissant_style_custom');
 
   function color_picker() {
     wp_enqueue_style( 'wp-color-picker' );
