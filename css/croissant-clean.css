@@ -134,7 +134,6 @@
 #adminmenuwrap ul#adminmenu li.wp-not-current-submenu ul.wp-submenu {
   left: 200px;
   margin-top: 1px;
-  background: #364052;
 }
 #adminmenuwrap ul#adminmenu li:hover a, #adminmenuwrap ul#adminmenu li:focus a {
   color: white;
