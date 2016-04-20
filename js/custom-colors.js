@@ -19,5 +19,4 @@ jQuery(document).ready(function($){
     $('.custom-color').val('');
     $('.wp-color-result').css('background-color', 'transparent');
   });
-
 });

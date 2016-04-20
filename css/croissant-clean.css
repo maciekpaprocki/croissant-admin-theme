@@ -69,13 +69,6 @@
 #wpadminbar li:hover > a span {
   color: #FF8174 !important;
 }
-/*
-#adminmenu li.wp-not-current-submenu a.menu-top:focus + .wp-submenu,
-.js #adminmenu li.wp-not-current-submenu.opensub .wp-submenu,
-.js #adminmenu .sub-open,
-.no-js li.wp-has-submenu:hover .wp-submenu {
-  top: -1000em;
-}*/
 
 #adminmenuback,
 #adminmenuwrap,
