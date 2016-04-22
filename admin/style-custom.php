@@ -170,9 +170,6 @@ if (!empty(get_option('croissant_theme'))) {
         margin-top: 0 !important;
         background: {$color_3};
       }
-      #adminmenuwrap ul#adminmenu li.wp-has-submenu ul.wp-submenu li a {
-        color: {$color_3};
-      }
       #adminmenuwrap ul#adminmenu li.wp-has-submenu ul.wp-submenu li a.current {
         color: white;
       }
@@ -182,9 +179,6 @@ if (!empty(get_option('croissant_theme'))) {
       #adminmenuwrap ul#adminmenu li:hover a, #adminmenuwrap ul#adminmenu li:focus a {
         color: white;
         background: {$color_4};
-      }
-      #adminmenuwrap ul#adminmenu li.wp-menu-separator {
-        background: {$color_3};
       }
       #adminmenuwrap ul#adminmenu li.menu-top:hover,
       #adminmenuwrap ul#adminmenu li.opensub > a.menu-top,
@@ -410,9 +404,6 @@ if (!empty(get_option('croissant_theme'))) {
         width: 200px;
         background: {$color_2};
       }
-      #adminmenuwrap ul#adminmenu li.wp-has-submenu ul.wp-submenu li a {
-        color: {$color_3};
-      }
       #adminmenuwrap ul#adminmenu li.wp-has-submenu ul.wp-submenu li a.current {
         font-weight: bold;
       }
@@ -425,9 +416,6 @@ if (!empty(get_option('croissant_theme'))) {
       }
       #adminmenuwrap ul#adminmenu li:hover a, #adminmenuwrap ul#adminmenu li:focus a {
         color: {$color_3};
-        background: {$color_2};
-      }
-      #adminmenuwrap ul#adminmenu li.wp-menu-separator {
         background: {$color_2};
       }
       #adminmenuwrap ul#adminmenu li.menu-top:hover,
@@ -583,7 +571,6 @@ if (!empty(get_option('croissant_theme'))) {
         padding-left: 20px;
         padding-right: 20px;
       }
-
       #wpbody #wpbody-content #screen-meta {
         -webkit-box-shadow: none;
         box-shadow: none;
@@ -693,6 +680,12 @@ if (!empty(get_option('croissant_theme'))) {
       #adminmenuwrap ul#adminmenu li.current a .wp-menu-image:before, #adminmenuwrap ul#adminmenu li.wp-has-current-submenu a .wp-menu-image:before {
         color: {$color_4};
       }
+      .wrap .add-new-h2:hover, .wrap .page-title-action:hover {
+        background: {$color_4} !important;
+      }
+      #adminmenu div.separator {
+        background: {$color_4};
+      }
       #adminmenuwrap ul#adminmenu li.wp-has-submenu ul.wp-submenu {
         width: 200px;
         padding-left: 25px;
@@ -718,9 +711,6 @@ if (!empty(get_option('croissant_theme'))) {
       }
       #adminmenuwrap ul#adminmenu li:hover a .wp-menu-image:before, #adminmenuwrap ul#adminmenu li:focus a .wp-menu-image:before {
         color: {$color_4};
-      }
-      #adminmenuwrap ul#adminmenu li.wp-menu-separator {
-        height: 15px !important;
       }
       #adminmenuwrap ul#adminmenu li.menu-top:hover,
       #adminmenuwrap ul#adminmenu li.opensub > a.menu-top,
@@ -882,10 +872,6 @@ if (!empty(get_option('croissant_theme'))) {
           left: 0;
           width: 100%;
           padding-left: 0;
-        }
-
-        #adminmenuwrap ul#adminmenu li.wp-menu-separator {
-          height: 0px !important;
         }
       }
       @media only screen and (max-width: 782px) {
