@@ -186,6 +186,10 @@ if (!empty(get_option('croissant_theme'))) {
         background-color: {$color_4} !important;
       }
 
+      #postbox-container-1.postbox-container .hndle {
+        border-bottom: 2px solid {$color_4};
+      }
+
       #collapse-menu:hover,
       #collapse-menu:hover #collapse-button div:after {
         color: {$color_4};
@@ -422,6 +426,9 @@ if (!empty(get_option('croissant_theme'))) {
       #adminmenuwrap ul#adminmenu li.opensub > a.menu-top,
       #adminmenuwrap ul#adminmenu li > a.menu-top:focus {
         background-color: {$color_2} !important;
+      }
+      #postbox-container-1.postbox-container .hndle {
+        border-bottom: {$color_4} 2px solid;
       }
 
       #collapse-menu:hover,
@@ -718,6 +725,10 @@ if (!empty(get_option('croissant_theme'))) {
         background-color: transparent !important;
       }
 
+      #postbox-container-1.postbox-container .hndle {
+        border-bottom: 5px solid {$color_4};
+      }
+
       #collapse-menu:hover,
       #collapse-menu:hover #collapse-button div:after {
         color: {$color_4};
@@ -898,13 +909,18 @@ if (!empty(get_option('croissant_theme'))) {
           top: 0;
         }
 
-        #wpadminbar div.quicklinks ul#wp-admin-bar-root-default li a:before, #wpadminbar div.quicklinks ul#wp-admin-bar-root-default li a span.ab-icon, #wpadminbar div.quicklinks ul#wp-admin-bar-top-secondary li a:before, #wpadminbar div.quicklinks ul#wp-admin-bar-top-secondary li a span.ab-icon {
+        #wpadminbar div.quicklinks ul#wp-admin-bar-root-default li a:before, #wpadminbar d('environment-style'dminbar div.quicklinksiv.quicklinks ul#wp-admin-bar-root-default li a span.ab-icon, #wpadminbar div.quicklinks ul#wp-admin-bar-top-secondary li a:before, #wpadminbar div.quicklinks ul#wp-admin-bar-top-secondary li a span.ab-icon {
           font: 400 32px/1 dashicons !important;
         }
       }
       ";
   endif;
 }
+
+if (WP_ENV !== 'production') {
+  echo "<style>body.wp-admin #adminmenuback {border-right: 5px solid red;}</style>";
+}
+
 if (isset($custom_css)) {
   wp_add_inline_style( 'custom-style', $custom_css );
 }
