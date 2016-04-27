@@ -142,9 +142,6 @@
 #adminmenuwrap ul#adminmenu li:hover a .wp-menu-image:before, #adminmenuwrap ul#adminmenu li:focus a .wp-menu-image:before {
   color: #FF8174;
 }
-#adminmenuwrap ul#adminmenu li.wp-menu-separator {
-  height: 15px !important;
-}
 #adminmenuwrap ul#adminmenu li.menu-top:hover,
 #adminmenuwrap ul#adminmenu li.opensub > a.menu-top,
 #adminmenuwrap ul#adminmenu li > a.menu-top:focus {
