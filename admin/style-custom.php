@@ -917,8 +917,12 @@ if (!empty(get_option('croissant_theme'))) {
   endif;
 }
 
-if (WP_ENV !== 'production') {
-  echo "<style>body.wp-admin #adminmenuback {border-right: 5px solid red;}</style>";
+if (WP_ENV == 'development') {
+  echo "<style>body.wp-admin #adminmenuback {border-right: 5px solid #4CD964;}</style>";
+}
+
+if (WP_ENV == 'staging') {
+  echo "<style>body.wp-admin #adminmenuback {border-right: 5px solid #FF9500;}</style>";
 }
 
 if (isset($custom_css)) {

@@ -609,6 +609,9 @@ body.wp-admin #adminmenuback {
   z-index: 100;
 }
 
+#poststuff .stuffbox>h3, #poststuff h2, #poststuff h3.hndle {
+  font-size: 18px;
+}
 
 
 
