@@ -84,6 +84,20 @@ if( class_exists('croissant') ) {
   add_action('admin_enqueue_scripts', 'update_style');
   add_action('login_enqueue_scripts', 'update_style');
 
+  // Change Howdy to something a little more je ne sais quoi
+  function howdy_message($translated_text, $text, $domain) {
+    $hour = date('H', time());
+    if($hour > 6 && $hour <= 17) {
+      $message = 'Bonjour';
+    } else {
+      $message = 'Bonsoir';
+    }
+
+    $new_message = str_replace('Howdy', $message, $text);
+    return $new_message;
+  }
+  add_filter('gettext', 'howdy_message', 10, 3);
+
   // Add plugin scripts
   function croissant_scripts() {
     wp_register_script('uploader', plugins_url('js/uploader.js', __FILE__));
