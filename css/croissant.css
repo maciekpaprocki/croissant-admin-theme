@@ -613,5 +613,10 @@ body.wp-admin #adminmenuback {
   font-size: 18px;
 }
 
+.acf-field.acf-field-strict-wysiwyg.acf-field-widget-heading-text .editable {
+  font-size:32px;
+  line-height: 1.41;
+  font-weight:bold;
+}
 
 
