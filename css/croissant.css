@@ -36,6 +36,11 @@
   font-size:32px;
 }
 
+#post-body.metabox-holder.columns-1 {
+  max-width: 782px;
+  margin:auto;
+}
+
 @media only screen and (min-width: 1600px) {
   .columns-2 #titlediv input#title[type="text"] {
     font-size:32px;
@@ -619,4 +624,20 @@ body.wp-admin #adminmenuback {
   font-weight:bold;
 }
 
+.acf-fields.-sidebar {
+  padding-left: 131px !important;
+}
+.acf-tab-wrap.-left .acf-tab-group {
+  width: 129px;
+}
 
+.acf-fields.-sidebar:before {
+  width:129px;
+}
+
+.acf-field-widget-heading-text .acf-label,
+.acf-field-widget-image-image .acf-label,
+.acf-field-widget-paragraph-html .acf-label
+{
+  display:none;
+}
