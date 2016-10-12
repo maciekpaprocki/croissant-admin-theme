@@ -31,83 +31,83 @@ function LightenDarkenColor(col, amt) {
 </script>
 
 <?php
-if( !empty(get_option('croissant_color_1')) ){
-  $color_1 = get_option('croissant_color_1');
+if (!empty(get_option('croissant_color_1'))) {
+    $color_1 = get_option('croissant_color_1');
 } else {
-  if( get_option('croissant_theme') === 'default' ){
-    $color_1 = '{$color_1}';
-  } elseif( get_option('croissant_theme') === 'light' ) {
-    $color_1 = '{$color_1}';
-  } elseif( get_option('croissant_theme') === 'clean' ) {
-    $color_1 = '{$color_1}';
-  }
+    if (get_option('croissant_theme') === 'default') {
+        $color_1 = '{$color_1}';
+    } elseif (get_option('croissant_theme') === 'light') {
+        $color_1 = '{$color_1}';
+    } elseif (get_option('croissant_theme') === 'clean') {
+        $color_1 = '{$color_1}';
+    }
 }
 
-if( !empty(get_option('croissant_color_2')) ){
-  $color_2 = get_option('croissant_color_2');
+if (!empty(get_option('croissant_color_2'))) {
+    $color_2 = get_option('croissant_color_2');
 } else {
-  if( get_option('croissant_theme') === 'default' ){
-    $color_2 = '{$color_2}';
-  } elseif( get_option('croissant_theme') === 'light' ) {
-    $color_2 = '{$color_2}';
-  } elseif( get_option('croissant_theme') === 'clean' ) {
-    $color_2 = '{$color_2}';
-  }
+    if (get_option('croissant_theme') === 'default') {
+        $color_2 = '{$color_2}';
+    } elseif (get_option('croissant_theme') === 'light') {
+        $color_2 = '{$color_2}';
+    } elseif (get_option('croissant_theme') === 'clean') {
+        $color_2 = '{$color_2}';
+    }
 }
 
-if( !empty(get_option('croissant_color_3')) ){
-  $color_3 = get_option('croissant_color_3');
+if (!empty(get_option('croissant_color_3'))) {
+    $color_3 = get_option('croissant_color_3');
 } else {
-  if( get_option('croissant_theme') === 'default' ){
-    $color_3 = '{$color_3}';
-  } elseif( get_option('croissant_theme') === 'light' ) {
-    $color_3 = '{$color_3}';
-  } elseif( get_option('croissant_theme') === 'clean' ) {
-    $color_3 = '{$color_3}';
-  }
+    if (get_option('croissant_theme') === 'default') {
+        $color_3 = '{$color_3}';
+    } elseif (get_option('croissant_theme') === 'light') {
+        $color_3 = '{$color_3}';
+    } elseif (get_option('croissant_theme') === 'clean') {
+        $color_3 = '{$color_3}';
+    }
 }
 
-if( !empty(get_option('croissant_color_4')) ){
-  $color_4 = get_option('croissant_color_4');
+if (!empty(get_option('croissant_color_4'))) {
+    $color_4 = get_option('croissant_color_4');
 } else {
-  if( get_option('croissant_theme') === 'default' ){
-    $color_4 = '{$color_4}';
-  } elseif( get_option('croissant_theme') === 'light' ) {
-    $color_4 = '{$color_4}';
-  } elseif( get_option('croissant_theme') === 'clean' ) {
-    $color_4 = '{$color_4}';
-  }
+    if (get_option('croissant_theme') === 'default') {
+        $color_4 = '{$color_4}';
+    } elseif (get_option('croissant_theme') === 'light') {
+        $color_4 = '{$color_4}';
+    } elseif (get_option('croissant_theme') === 'clean') {
+        $color_4 = '{$color_4}';
+    }
 }
 
 if (!empty(get_option('croissant_theme'))) {
-  function hex_color_mod($hex, $diff) {
-    $rgb = str_split(trim($hex, '# '), 2);
-    foreach ($rgb as &$hex) {
-      $dec = hexdec($hex);
-      if ($diff >= 0) {
-        $dec += $diff;
-      }
-      else {
-        $dec -= abs($diff);
-      }
-      $dec = max(0, min(255, $dec));
-      $hex = str_pad(dechex($dec), 2, '0', STR_PAD_LEFT);
+    function hex_color_mod($hex, $diff)
+    {
+        $rgb = str_split(trim($hex, '# '), 2);
+        foreach ($rgb as &$hex) {
+            $dec = hexdec($hex);
+            if ($diff >= 0) {
+                $dec += $diff;
+            } else {
+                $dec -= abs($diff);
+            }
+            $dec = max(0, min(255, $dec));
+            $hex = str_pad(dechex($dec), 2, '0', STR_PAD_LEFT);
+        }
+        return '#'.implode($rgb);
     }
-    return '#'.implode($rgb);
-  }
 
-  $color_1_dark = hex_color_mod($color_1, -30);
-  $color_2_dark = hex_color_mod($color_2, -30);
-  $color_3_dark = hex_color_mod($color_3, -30);
-  $color_4_dark = hex_color_mod($color_4, -30);
+    $color_1_dark = hex_color_mod($color_1, -30);
+    $color_2_dark = hex_color_mod($color_2, -30);
+    $color_3_dark = hex_color_mod($color_3, -30);
+    $color_4_dark = hex_color_mod($color_4, -30);
 
-  $white = '{$color_1}';
-  $black = '#000000';
-  $grey = '{$color_3}';
+    $white = '{$color_1}';
+    $black = '#000000';
+    $grey = '{$color_3}';
 
-  $option_theme = get_option('croissant_theme');
+    $option_theme = get_option('croissant_theme');
 
-  if( $option_theme === 'default' ):
+    if ($option_theme === 'default'):
     $custom_css = "
       /*
        * Body
@@ -317,8 +317,7 @@ if (!empty(get_option('croissant_theme'))) {
       .post-com-count:hover span {
         background-color: {$color_4} !important;
       }
-      ";
-  elseif( $option_theme === 'light' ):
+      "; elseif ($option_theme === 'light'):
     $custom_css = "
       /*
        * Body
@@ -563,8 +562,7 @@ if (!empty(get_option('croissant_theme'))) {
       .post-com-count:hover span {
         background-color: {$color_4} !important;
       }
-      ";
-  elseif( $option_theme === 'clean' ):
+      "; elseif ($option_theme === 'clean'):
     $custom_css = "
       /*
        * Body
@@ -909,23 +907,23 @@ if (!empty(get_option('croissant_theme'))) {
           top: 0;
         }
 
-        #wpadminbar div.quicklinks ul#wp-admin-bar-root-default li a:before, #wpadminbar d('environment-style'dminbar div.quicklinksiv.quicklinks ul#wp-admin-bar-root-default li a span.ab-icon, #wpadminbar div.quicklinks ul#wp-admin-bar-top-secondary li a:before, #wpadminbar div.quicklinks ul#wp-admin-bar-top-secondary li a span.ab-icon {
+        #wpadminbar div.quicklinks ul#wp-admin-bar-root-default li a:before, #wpadminbar div.quicklinksiv.quicklinks ul#wp-admin-bar-root-default li a span.ab-icon, #wpadminbar div.quicklinks ul#wp-admin-bar-top-secondary li a:before, #wpadminbar div.quicklinks ul#wp-admin-bar-top-secondary li a span.ab-icon {
           font: 400 32px/1 dashicons !important;
         }
       }
       ";
-  endif;
+    endif;
 }
 
 if (WP_ENV == 'development') {
-  echo "<style>body.wp-admin #adminmenuback {border-right: 5px solid #4CD964;}</style>";
+    echo "<style>body.wp-admin #adminmenuback {border-right: 5px solid #4CD964;}</style>";
 }
 
 if (WP_ENV == 'staging') {
-  echo "<style>body.wp-admin #adminmenuback {border-right: 5px solid #FF9500;}</style>";
+    echo "<style>body.wp-admin #adminmenuback {border-right: 5px solid #FF9500;}</style>";
 }
 
 if (isset($custom_css)) {
-  wp_add_inline_style( 'custom-style', $custom_css );
+    wp_add_inline_style('custom-style', $custom_css);
 }
 ?>
